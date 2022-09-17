@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Face-Detection/static/css/main.bcd11a5b.css",
-    "main.js": "/Face-Detection/static/js/main.b7472adf.js",
-    "static/js/787.78311798.chunk.js": "/Face-Detection/static/js/787.78311798.chunk.js",
-    "static/media/Fellowship.png": "/Face-Detection/static/media/Fellowship.a4c2d79f4e635d960f47.png",
-    "index.html": "/Face-Detection/index.html",
-    "main.bcd11a5b.css.map": "/Face-Detection/static/css/main.bcd11a5b.css.map",
-    "main.b7472adf.js.map": "/Face-Detection/static/js/main.b7472adf.js.map",
-    "787.78311798.chunk.js.map": "/Face-Detection/static/js/787.78311798.chunk.js.map"
+    "main.css": "/-Face-Detection-Hook/static/css/main.bcd11a5b.css",
+    "main.js": "/-Face-Detection-Hook/static/js/main.19767bb7.js",
+    "static/js/787.78311798.chunk.js": "/-Face-Detection-Hook/static/js/787.78311798.chunk.js",
+    "static/media/Fellowship.png": "/-Face-Detection-Hook/static/media/Fellowship.a4c2d79f4e635d960f47.png",
+    "index.html": "/-Face-Detection-Hook/index.html",
+    "main.bcd11a5b.css.map": "/-Face-Detection-Hook/static/css/main.bcd11a5b.css.map",
+    "main.19767bb7.js.map": "/-Face-Detection-Hook/static/js/main.19767bb7.js.map",
+    "787.78311798.chunk.js.map": "/-Face-Detection-Hook/static/js/787.78311798.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bcd11a5b.css",
-    "static/js/main.b7472adf.js"
+    "static/js/main.19767bb7.js"
   ]
 }
