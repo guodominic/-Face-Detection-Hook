@@ -3,12 +3,12 @@ import './ImageLinkForm.css'
 
 const ImageLinkForm = ({ inputChange, pictureSubmit }) => {
     return (
-        <div className="shown w-100">
-            <p className='f3 white'>
+        <div className="shown w-100 pt4 w-100">
+            {/*             <p className='f3 white'>
                 This Magic Brain will detect faces in your pictures. Git it a try.
-            </p>
+            </p> */}
 
-            <div className='center w-100' >
+            <div className='center pt2' >
                 <div className='form center pa4 br3 shadow-5 '>
                     <input className='f4 br3 pa2 w-70'
                         type='text'

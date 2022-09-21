@@ -1,34 +1,21 @@
-import React from 'react';
+import { useContext } from 'react';
 import { Particles } from '@blackbox-vision/react-particles';
 import './ParticlesJs.css'
+import { ThemeContext } from './them-context';
 
-const ParticlesJs = () => (
-    <Particles
-        id="simple"
-        width="auto"
-        height="100vh"
-        className='particles gradient'
-        /*         style={{
-                    backgroundColor: 'grey',
-                }} */
-        params={{
-            particles: {
-                number: {
-                    value: 250,
-                },
-                size: {
-                    value: 1,
-                },
-            },
-            interactivity: {
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: 'repulse',
-                    },
-                },
-            },
-        }}
-    />
-);
+const ParticlesJs = () => {
+
+    const { particalOptions } = useContext(ThemeContext);
+
+    console.log('render');
+    return (
+        <Particles
+            id="simple"
+            width="auto"
+            height="100vh"
+            className='particles gradient'
+            params={particalOptions}
+        />
+    );
+};
 export default ParticlesJs;

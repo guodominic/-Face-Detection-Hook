@@ -8,6 +8,10 @@ import Count from './component/Count/Count';
 import FaceRecognition from './component/FaceRecognition/FaceRecognition';
 import Signin from './component/Signin/Signin';
 import Register from './component/Register/Register';
+import BackgroundControl from './component/ParticlesJs/BackgroundControl';
+import ParticlesJs from './component/ParticlesJs/ParticlesJs';
+
+
 
 function App() {
   const [input, setInput] = useState('');
@@ -20,7 +24,9 @@ function App() {
     email: '',
     entries: 0,
     joined: ''
-  });
+  }
+  );
+
 
   const loadUser = (data) => {
     setUser({
@@ -33,7 +39,6 @@ function App() {
   };
 
   const calculateFaceLocation = (data) => {
-
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
@@ -77,7 +82,6 @@ function App() {
               //this.setState(Object.assign(this.state.user, { entries: count }));
               setUser(Object.assign(user, { entries: count })); //hook
               //this.setState({ user: { entries: count } });
-              //setUser({ user: { entries: count } }); //hook
             })
             .catch(console.log)
           displayFaceBox(calculateFaceLocation(response))
@@ -97,27 +101,30 @@ function App() {
       setRoute(route);
     }
   }
-
+  console.log('render1');
   return (
     <div className='App '>
+      <ParticlesJs />
       <br />
       <div className='ml4 mr4' style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Logo />
+        <Logo routeChange={onRouteChange} />
+        <BackgroundControl />
         <Navigation routeChange={onRouteChange} currentRoute={route} id={user.id} />
       </div>
-      {route === 'home'
-        ? <div>
-          <Count entries={user.entries} name={user.name} />
-          <ImageLinkForm inputChange={onInputChange} pictureSubmit={onPictureSubmit} />
-          <FaceRecognition box={box} imageUrl={imgUrl} />
-        </div>
-        : (
-          route === 'signin'
-            ? <Signin routeChange={onRouteChange} loadUser={loadUser} />
-            : <Register loadUser={loadUser} routeChange={onRouteChange} />
-        )
+      {
+        route === 'home'
+          ? <div>
+            <Count entries={user.entries} name={user.name} />
+            <ImageLinkForm inputChange={onInputChange} pictureSubmit={onPictureSubmit} />
+            <FaceRecognition box={box} imageUrl={imgUrl} />
+          </div>
+          : (
+            route === 'signin'
+              ? <Signin routeChange={onRouteChange} loadUser={loadUser} />
+              : <Register loadUser={loadUser} routeChange={onRouteChange} />
+          )
       }
-    </div>
+    </div >
   )
 }
 

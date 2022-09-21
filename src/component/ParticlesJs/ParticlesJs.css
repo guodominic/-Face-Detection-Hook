@@ -10,3 +10,48 @@
 .gradient {
   background-image: conic-gradient(from 90deg, rgb(255, 0, 208), rgb(2, 177, 205), rgb(255, 143, 6));
 }
+
+.slidecontainer {
+  width: 35%;
+  height: 45px;
+}
+.numberslide{
+  width: 60%;
+  position: relative
+}
+.sizeslide{
+  width: 20%;
+  position: relative
+}
+
+.buble{
+  position:absolute;
+  color: white;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 30%;
+  background: #e474ce;
+  cursor: pointer;
+}
+

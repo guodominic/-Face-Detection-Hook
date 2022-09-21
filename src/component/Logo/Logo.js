@@ -4,21 +4,8 @@ import Tilt from 'react-parallax-tilt';
 import Fellowship from './Fellowship.png';
 
 
-const Logo = () => {
+const Logo = ({ routeChange }) => {
     return (
-        /*  <Tilt
-             className="parallax-effect-img br2 shadow-2"
-             tiltMaxAngleX={40}
-             tiltMaxAngleY={40}
-             perspective={800}
-             glareEnable={true}
-             glareMaxOpacity={0.45}
-             scale={1.02}
-             gyroscope={true}
-             style={{ height: 250, width: 250 }}
-         >
-             <img src={Fellowship} className="inner-element" alt="logo" width="150" height="auto" />
-         </Tilt> */
         <Tilt
             className="parallax-effect-glare-scale br3 pt2 shadow-2 logo"
             perspective={100}
@@ -27,7 +14,10 @@ const Logo = () => {
             scale={1.02}
             glarePosition="all"
         >
-            <img src={Fellowship} className="inner-element tc " alt="pic" width="50" height="auto" />
+            <img src={Fellowship} className="inner-element tc "
+                alt="pic" width="50" height="auto"
+
+            />
         </Tilt>
     )
 }

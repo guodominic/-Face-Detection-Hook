@@ -81,7 +81,7 @@ const Navigation = ({ routeChange, currentRoute, id }) => {
                     onClick={() => routeChange('signin')}
                 >Delet Acct</p> */}
                 <p
-                    className="f3 link white underline shown dim pa3 pointer"
+                    className="f3 link white underline shown dim pointer"
                     onClick={() => routeChange('signin')}
                 >Sign out</p>
             </nav>
@@ -90,7 +90,7 @@ const Navigation = ({ routeChange, currentRoute, id }) => {
         return (
             <nav className="shown" style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <p
-                    className="f3 link white underline dim pa3 pointer"
+                    className="f3 link white underline dim pointer"
                     onClick={() => routeChange('signin')}
                 >Signin</p>
             </nav>
