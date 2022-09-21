@@ -80,7 +80,7 @@ function App() {
           }).then(response => response.json())
             .then(count => {
               //this.setState(Object.assign(this.state.user, { entries: count }));
-              setUser(Object.assign(user, { entries: count })); //hook
+              setUser(() => { return Object.assign(user, { entries: count }) }); //hook
               //this.setState({ user: { entries: count } });
             })
             .catch(console.log)
