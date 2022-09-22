@@ -9,7 +9,7 @@ function BackgroundControl() {
 
     useEffect(() => {
         const ele = document.querySelector('.buble');
-        ele.style.left = `${Number(count / 4)}px`;
+        ele.style.left = `${Number(count / 10)}px`;
     }, [count])
 
     return (
@@ -19,7 +19,7 @@ function BackgroundControl() {
                 <input type="range" min="0" max="500" value={count}
                     className="slider" id="numRange" onInput={onCountChange} />
                 <div className="buble">
-                    #: {count}
+                    {count}
                 </div>
             </div>
             <div className='sizeslide'>

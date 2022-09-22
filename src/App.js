@@ -35,10 +35,6 @@ function App() {
     }, 500);
   }, [box])
 
-
-
-
-
   const loadUser = (data) => {
     setUser({
       id: data.id,
