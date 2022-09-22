@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from './component/Navigation/Navigation';
 import Logo from './component/Logo/Logo'
 import ImageLinkForm from './component/ImageLinkForm/ImageLinkForm'
@@ -26,6 +26,14 @@ function App() {
     joined: ''
   }
   );
+  const [time, setTime] = useState(new Date().toLocaleTimeString())
+  console.log('render');
+
+
+  setInterval(() => {
+    setTime(new Date().toLocaleTimeString())
+  }, 500);
+
 
 
   const loadUser = (data) => {
@@ -101,7 +109,21 @@ function App() {
       setRoute(route);
     }
   }
-  console.log('render1');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    })
+  })
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((ele) => observer.observe(ele));
+  const hidden1Elements = document.querySelectorAll('.hidden1');
+  hidden1Elements.forEach((ele) => observer.observe(ele));
+
   return (
     <div className='App '>
       <ParticlesJs />
@@ -120,11 +142,40 @@ function App() {
           </div>
           : (
             route === 'signin'
-              ? <Signin routeChange={onRouteChange} loadUser={loadUser} />
+              ?
+              <>
+                <section className='hidden' style={{ 'min-height': '70vh' }}>
+                  <Signin routeChange={onRouteChange} loadUser={loadUser} />
+                </section>
+                <section className='hidden1 white' style={{ 'min-height': '110vh' }}>
+                  <h1 >Give it a try without account</h1>
+                  <section className='logos center'>
+                    <div className='logo hidden1'>
+                      <img src='https://miro.medium.com/max/640/1*7Y_aSJVafQQqzXzjdbJaew.jpeg' alt='pic1' />
+                    </div>
+                    <div className='logo hidden1'>
+                      <img src='https://paintbynumberscanvas.com/wp-content/uploads/2020/09/boss-baby-talks-cute-face-paint-by-number.jpg' alt='pic2' />
+                    </div>
+                    <div className='logo hidden1'>
+                      <img src='https://i.pinimg.com/474x/d2/9e/bc/d29ebc811723220b2021901363bbb9b6--what-kind-of-would-you.jpg' alt='pic3' />
+                    </div>
+                    <div className='logo hidden1'>
+                      <img src='https://i.pinimg.com/736x/d6/e5/a3/d6e5a3d1bde79797fb0ccc2db9b8183f.jpg' alt='pic4' />
+                    </div>
+                  </section>
+                  <h1 >Keep scrolling down</h1>
+                </section>
+                <section className='hidden1' style={{ 'min-height': '120vh' }}>
+                  <ImageLinkForm inputChange={onInputChange} pictureSubmit={onPictureSubmit} />
+                  <FaceRecognition box={box} imageUrl={imgUrl} />
+                </section>
+              </>
               : <Register loadUser={loadUser} routeChange={onRouteChange} />
           )
       }
+      <h2 className='hidden white f4 shown'>{time} </h2>
     </div >
+
   )
 }
 

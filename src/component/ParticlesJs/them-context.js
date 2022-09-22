@@ -12,7 +12,7 @@ const ThemeProvider = ({ children }) => {
             setSize(e.target.value);
         } */
 
-    const [particalOptions, setNewParticleOptions] = useState({
+    const [particalOptions, setParticleOptions] = useState({
         particles: {
             number: {
                 value: 150,
@@ -32,7 +32,7 @@ const ThemeProvider = ({ children }) => {
     })
 
     const onCountChange = (e) => {
-        setNewParticleOptions({
+        setParticleOptions({
             particles: {
                 number: {
                     value: e.target.value,
@@ -52,7 +52,7 @@ const ThemeProvider = ({ children }) => {
         })
     }
     const onSizeChange = (e) => {
-        setNewParticleOptions({
+        setParticleOptions({
             particles: {
                 number: {
                     value: particalOptions.particles.number.value,
@@ -72,7 +72,7 @@ const ThemeProvider = ({ children }) => {
         })
     }
     return (
-        <ThemeContext.Provider value={{ particalOptions, setNewParticleOptions, onCountChange, onSizeChange }}>
+        <ThemeContext.Provider value={{ particalOptions, onCountChange, onSizeChange }}>
             {children}
         </ThemeContext.Provider>
     )

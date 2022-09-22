@@ -7,7 +7,7 @@ const ParticlesJs = () => {
 
     const { particalOptions } = useContext(ThemeContext);
 
-    console.log('render');
+
     return (
         <Particles
             id="simple"
