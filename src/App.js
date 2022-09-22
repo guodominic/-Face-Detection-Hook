@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navigation from './component/Navigation/Navigation';
 import Logo from './component/Logo/Logo'
 import ImageLinkForm from './component/ImageLinkForm/ImageLinkForm'
@@ -144,15 +144,14 @@ function App() {
             route === 'signin'
               ?
               <>
-                <section className='hidden' style={{ 'min-height': '70vh' }}>
-                  <p className='shown f1 white grow'> Face Detection App</p>
-                  <Signin
-                    routeChange={onRouteChange} loadUser={loadUser}
-                    inputChange={onInputChange} pictureSubmit={onPictureSubmit}
-                    box={box} imageUrl={imgUrl}
-                  />
-                </section>
-                <section className='hidden1' style={{ 'min-height': '120vh' }}>
+                <p className='shown f1 white grow'> Face Detection App</p>
+                <Signin className='hidden'
+                  routeChange={onRouteChange} loadUser={loadUser}
+                  inputChange={onInputChange} pictureSubmit={onPictureSubmit}
+                  box={box} imageUrl={imgUrl}
+                />
+                <withoutAccount className='hidden1 white' />
+                <section className='hidden1' style={{ 'min-height': '70vh' }}>
                   <p className="f2 white" >Here you go</p>
                   <ImageLinkForm inputChange={onInputChange} pictureSubmit={onPictureSubmit} />
                   <FaceRecognition box={box} imageUrl={imgUrl} />

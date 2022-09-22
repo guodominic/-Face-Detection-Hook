@@ -12,7 +12,6 @@
 
   p {
     font-family: UNITED BRK;
-    font-weight: 400;
   }
 
 .center {
@@ -33,7 +32,7 @@ section {
 h2 {
   position: fixed;
   left: 20px;
-  bottom: 20px;
+  bottom: 1px;
   z-index: 10;
 }
 

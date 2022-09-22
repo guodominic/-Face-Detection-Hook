@@ -5,7 +5,7 @@ const ImageLinkForm = ({ inputChange, pictureSubmit }) => {
     return (
         <div className="shown w-100 pt4 w-100">
             <div className='center pt2' >
-                <div className='form center pa4 br3 shadow-5 w-70'>
+                <div className='form center pa4 br3 shadow-5 w-70 mw7'>
                     <input className='f4 br3 pa2 w-70'
                         type='text'
                         onChange={inputChange}
