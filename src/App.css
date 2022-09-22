@@ -3,6 +3,18 @@
   
 }
 
+ @font-face {
+    font-family: 'UNITED BRK';
+    font-style: normal;
+    font-weight: normal;
+    src: local('UNITED BRK'), url('united.woff') format('woff');
+    }
+
+  p {
+    font-family: UNITED BRK;
+    font-weight: 400;
+  }
+
 .center {
   display: flex;
   justify-content: center;
@@ -16,6 +28,13 @@ section {
   display: grid;
   align-content: center;
   /* min-width: 100vh; */
+}
+
+h2 {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 10;
 }
 
 .hidden{
@@ -51,3 +70,4 @@ section {
 .logo:nth-child(4){
   transition-delay: 1200ms;
 }
+
