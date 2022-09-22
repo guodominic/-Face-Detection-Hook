@@ -1,8 +1,8 @@
 
-export default function withoutAccount() {
+export default function WithoutAccount() {
     return (
         <>
-            <p className="f2" >Give it a try without account?</p>
+            <p className="f2" >Try without account?</p>
             <div className='logos center'>
                 <div className='logo hidden1'>
                     <img src='https://miro.medium.com/max/640/1*7Y_aSJVafQQqzXzjdbJaew.jpeg' alt='pic1' />

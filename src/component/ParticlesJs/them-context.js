@@ -15,7 +15,7 @@ const ThemeProvider = ({ children }) => {
     const [particalOptions, setParticleOptions] = useState({
         particles: {
             number: {
-                value: 150,
+                value: 145,
             },
             size: {
                 value: 6,

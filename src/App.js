@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from './component/Navigation/Navigation';
 import Logo from './component/Logo/Logo'
 import ImageLinkForm from './component/ImageLinkForm/ImageLinkForm'
@@ -10,6 +10,7 @@ import Signin from './component/Signin/Signin';
 import Register from './component/Register/Register';
 import BackgroundControl from './component/ParticlesJs/BackgroundControl';
 import ParticlesJs from './component/ParticlesJs/ParticlesJs';
+import WithoutAccount from './component/WithoutAccount/WithoutAccount';
 
 
 
@@ -27,12 +28,14 @@ function App() {
   }
   );
   const [time, setTime] = useState(new Date().toLocaleTimeString())
-  console.log('render');
+
+  useEffect(() => {
+    setInterval(() => {
+      setTime(new Date().toLocaleTimeString())
+    }, 500);
+  }, [box])
 
 
-  setInterval(() => {
-    setTime(new Date().toLocaleTimeString())
-  }, 500);
 
 
 
@@ -152,8 +155,10 @@ function App() {
                   inputChange={onInputChange} pictureSubmit={onPictureSubmit}
                   box={box} imageUrl={imgUrl}
                 />
-                <withoutAccount className='hidden1 white' />
-                <section className='hidden1' style={{ 'min-height': '70vh' }}>
+                <section className='hidden1 shown white' style={{ 'minHeight': '95vh' }}>
+                  <WithoutAccount />
+                </section>
+                <section className='hidden1' style={{ 'minHeight': '70vh' }}>
                   <p className="f2 white" >Here you go</p>
                   <ImageLinkForm inputChange={onInputChange} pictureSubmit={onPictureSubmit} />
                   <FaceRecognition box={box} imageUrl={imgUrl} />

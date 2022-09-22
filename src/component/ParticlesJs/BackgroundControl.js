@@ -19,14 +19,14 @@ function BackgroundControl() {
                 <input type="range" min="0" max="500" value={count}
                     className="slider" id="numRange" onInput={onCountChange} />
                 <div className="buble">
-                    number: {count}
+                    #: {count}
                 </div>
             </div>
             <div className='sizeslide'>
                 <input type="range" min="0" max="10" value={size}
                     className="slider" id="sizeRange" onInput={onSizeChange} />
                 <div className='white'>
-                    size:{size}
+                    S:{size}
                 </div>
             </div>
         </div>
