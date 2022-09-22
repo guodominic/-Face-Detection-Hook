@@ -135,7 +135,7 @@ function App() {
       </div>
       {
         route === 'home'
-          ? <div>
+          ? <div className='hidden'>
             <Count entries={user.entries} name={user.name} />
             <ImageLinkForm inputChange={onInputChange} pictureSubmit={onPictureSubmit} />
             <FaceRecognition box={box} imageUrl={imgUrl} />
@@ -144,8 +144,10 @@ function App() {
             route === 'signin'
               ?
               <>
-                <p className='shown f1 white grow'> Face Detection App</p>
-                <Signin className='hidden'
+                <div className='hidden1'>
+                  <p className='shown f1 white grow'> Face Detection App</p>
+                </div>
+                <Signin
                   routeChange={onRouteChange} loadUser={loadUser}
                   inputChange={onInputChange} pictureSubmit={onPictureSubmit}
                   box={box} imageUrl={imgUrl}
@@ -157,7 +159,10 @@ function App() {
                   <FaceRecognition box={box} imageUrl={imgUrl} />
                 </section>
               </>
-              : <Register loadUser={loadUser} routeChange={onRouteChange} />
+              :
+              <section className='hidden'>
+                <Register loadUser={loadUser} routeChange={onRouteChange} />
+              </section>
           )
       }
       <h2 className='hidden white f4 shown'>{time} </h2>
