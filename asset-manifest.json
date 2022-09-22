@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/-Face-Detection-Hook/static/css/main.8d8c9c81.css",
-    "main.js": "/-Face-Detection-Hook/static/js/main.f72c227c.js",
+    "main.css": "/-Face-Detection-Hook/static/css/main.81064299.css",
+    "main.js": "/-Face-Detection-Hook/static/js/main.0fde1486.js",
     "static/js/787.78311798.chunk.js": "/-Face-Detection-Hook/static/js/787.78311798.chunk.js",
     "static/media/Fellowship.png": "/-Face-Detection-Hook/static/media/Fellowship.a4c2d79f4e635d960f47.png",
     "index.html": "/-Face-Detection-Hook/index.html",
-    "main.8d8c9c81.css.map": "/-Face-Detection-Hook/static/css/main.8d8c9c81.css.map",
-    "main.f72c227c.js.map": "/-Face-Detection-Hook/static/js/main.f72c227c.js.map",
+    "main.81064299.css.map": "/-Face-Detection-Hook/static/css/main.81064299.css.map",
+    "main.0fde1486.js.map": "/-Face-Detection-Hook/static/js/main.0fde1486.js.map",
     "787.78311798.chunk.js.map": "/-Face-Detection-Hook/static/js/787.78311798.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d8c9c81.css",
-    "static/js/main.f72c227c.js"
+    "static/css/main.81064299.css",
+    "static/js/main.0fde1486.js"
   ]
 }
