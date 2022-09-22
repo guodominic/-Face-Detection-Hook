@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/-Face-Detection-Hook/static/css/main.174a120a.css",
-    "main.js": "/-Face-Detection-Hook/static/js/main.29332e50.js",
+    "main.js": "/-Face-Detection-Hook/static/js/main.680ae86a.js",
     "static/js/787.78311798.chunk.js": "/-Face-Detection-Hook/static/js/787.78311798.chunk.js",
     "static/media/united.woff": "/-Face-Detection-Hook/static/media/united.9e03dbb6925deb405045.woff",
     "static/media/Fellowship.png": "/-Face-Detection-Hook/static/media/Fellowship.a4c2d79f4e635d960f47.png",
     "index.html": "/-Face-Detection-Hook/index.html",
     "main.174a120a.css.map": "/-Face-Detection-Hook/static/css/main.174a120a.css.map",
-    "main.29332e50.js.map": "/-Face-Detection-Hook/static/js/main.29332e50.js.map",
+    "main.680ae86a.js.map": "/-Face-Detection-Hook/static/js/main.680ae86a.js.map",
     "787.78311798.chunk.js.map": "/-Face-Detection-Hook/static/js/787.78311798.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.174a120a.css",
-    "static/js/main.29332e50.js"
+    "static/js/main.680ae86a.js"
   ]
 }
