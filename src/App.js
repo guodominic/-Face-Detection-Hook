@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navigation from './component/Navigation/Navigation';
 import Logo from './component/Logo/Logo'
 import ImageLinkForm from './component/ImageLinkForm/ImageLinkForm'
@@ -29,11 +29,9 @@ function App() {
   );
   const [time, setTime] = useState(new Date().toLocaleTimeString())
 
-  useEffect(() => {
-    setInterval(() => {
-      setTime(new Date().toLocaleTimeString())
-    }, 500);
-  }, [box])
+  setInterval(() => {
+    setTime(new Date().toLocaleTimeString())
+  }, 500);
 
   const loadUser = (data) => {
     setUser({
@@ -130,7 +128,7 @@ function App() {
       <div className='ml4 mr4' style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Logo routeChange={onRouteChange} />
         <BackgroundControl />
-        <Navigation routeChange={onRouteChange} currentRoute={route} id={user.id} />
+        <Navigation routeChange={onRouteChange} currentRoute={route} user={user} />
       </div>
       {
         route === 'home'
